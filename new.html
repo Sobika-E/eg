@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobika | Elegant Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            width: 90%;
+            max-width: 900px;
+            padding: 50px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            background: white;
+            color: #764ba2;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 5%;
+        }
+
+        .circle2 {
+            width: 150px;
+            height: 150px;
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .glass-card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+
+    <div class="glass-card">
+        <h1>Welcome, Sobika ✨</h1>
+        <p>
+            A modern, elegant glassmorphism webpage designed with smooth animations and a premium aesthetic.
+            Clean. Minimal. Powerful.
+        </p>
+        <button class="btn" onclick="showMessage()">Explore More</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Bonjour Sobika! 🚀 Your beautiful webpage is ready!");
+        }
+    </script>
+
+</body>
+</html>
