@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Sobika-E/eg.git'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t eg-app .'
@@ -21,7 +27,6 @@ pipeline {
                 sh 'docker run -d -p 8091:80 --name eg-container eg-app'
             }
         }
-
     }
 }
 
